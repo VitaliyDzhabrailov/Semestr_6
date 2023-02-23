@@ -1,4 +1,5 @@
-"""Реализуйте одну очень странную нейросеть. Нейросеть должна:
+"""
+Реализуйте одну очень странную нейросеть. Нейросеть должна:
 
 1. принимать на вход вектор признаков (чисел с плавающей точкой);
 2. в качестве первого преобразования умножать вектор признаков на матрицу весов A2 (на выходе получается новый вектор);
@@ -26,6 +27,30 @@
 
 Ремарка: чтобы это было более похоже на нейросеть, можно было сказать,
 что слоёв у вас штуки так три, в первом используется A, во втором - квадрат A, в третьем - куб А.
-Но в режиме контрольной не будем усложнять."""
+Но в режиме контрольной не будем усложнять.
+"""
 
 import pandas as pd
+import numpy as np
+
+path_A = str(input())
+path_B = str(input())
+vector = np.array(list(map(float, input().split())))
+df_A = pd.read_csv(path_A, header=None, sep=" ")
+df_B = pd.read_csv(path_B, header=None, sep=" ")
+# print(df_A.values)
+# print(df_A.values[0][0])
+# print(df_A.values.shape)
+a_2 = df_A @ df_A
+# print(a_2)
+# print(vector)
+step_1 = a_2 @ vector
+# print(step_1)
+# print(df_B)
+step_2 = step_1.values.reshape((1,3)) @ df_B.values.reshape((3, 1))
+print(float(step_2))
+
+
+'''A.dat
+B.dat
+0.5 0.1 0.5'''
