@@ -36,9 +36,12 @@ df_rates = pd.read_csv(df_rates_path, sep=";")
 
 df_rates_mean = df_rates.groupby(['id'], as_index=False).mean()
 df_rates_mean.sort_values(by='mark', ascending=False, inplace=True, ignore_index=True)
-print(df_games[df_games['id'] == df_rates_mean['id'][0]]['name'].values[0], df_rates_mean['mark'][0].round(3))
-print(df_games[df_games['id'] == df_rates_mean['id'][1]]['name'].values[0], df_rates_mean['mark'][1].round(3))
-print(df_games[df_games['id'] == df_rates_mean['id'][2]]['name'].values[0], df_rates_mean['mark'][2].round(3))
+a = df_rates_mean['mark'][0]
+b = df_rates_mean['mark'][1]
+c = df_rates_mean['mark'][2]
+print(df_games[df_games['id'] == df_rates_mean['id'][0]]['name'].values[0], format(a, '.3f'))
+print(df_games[df_games['id'] == df_rates_mean['id'][1]]['name'].values[0], format(b, '.3f'))
+print(df_games[df_games['id'] == df_rates_mean['id'][2]]['name'].values[0], format(c, '.3f'))
 
 df_high_rates_index = df_rates_mean[df_rates_mean['mark'] > 8]
 df_high_rates_games = df_games[df_games.id.isin(df_high_rates_index.id) == True].assign(score=lambda x: 1)
