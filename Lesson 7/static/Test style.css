@@ -1,0 +1,16 @@
+body{
+     background: rgb(150, 200, 150)
+}
+
+h1{
+     color: brown
+}
+
+#appetite{
+    font-style: italic;
+    font-size: 3em;
+}
+
+.main-ingredient{
+    font-weight: bold;
+}
