@@ -1,0 +1,58 @@
+/*Стили основных частей*/
+
+body{
+     background: rgb(20, 20, 20)
+}
+
+h1{
+    color: white;
+    font-family: Gabriola, "Times New Roman";
+    font-size: 5em;
+    letter-spacing: 0.25rem;
+}
+
+p{
+    color: white;
+    font-style: italic;
+    font-size: 3em;
+}
+
+/*Классы стилей*/
+
+.h_education{
+    color: white;
+    font-style: italic;
+    font-size: 2em;
+}
+
+.education{
+    color: white;
+    font-style: italic;
+    font-size: 1.1em;
+    margin: 10px;
+}
+
+
+/*Всплывающие окна*/
+.hide, .hide + label ~ div {
+    display: none;
+}
+
+.hide + label, .hide:checked + label {
+    padding: 0;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-bottom: 1px dotted white;
+}
+
+.hide:checked + label {
+    color: rgb(100, 100, 100);
+    border-bottom: 0;
+}
+
+.hide:checked + label + div {
+    display: block;
+    background: rgb(40, 40, 40);
+    padding: 5px;
+}

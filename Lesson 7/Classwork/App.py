@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/recipes/apple_pie")
 def home():
-    return render_template('Test site.html')
+    return render_template('business_card.html')
 
 
 if __name__ == "__main__":
