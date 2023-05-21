@@ -3,10 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>Визитка</title>
-        <link rel="stylesheet" href="../static/Test%20style.css">
+        <link rel="stylesheet" href="../static/styles/main.css">
+        <link rel="stylesheet" href='../static/styles/<?php echo $_SESSION["theme"]; ?>.css' id="theme-link">
         <link rel="icon" href="../static/img.png">
     </head>
     <body>
+        <div class="theme-button" id="theme-button">Change theme</div>
         <h1>Джабраилов Виталий Дмитриевич</h1>
         <img src="../static/img.png" width="500">
         <p>Образование:</p>
@@ -56,7 +58,9 @@
             </li>
         </ol>
 
-    <p>По данной ссылке расположено мое <a href="{{ url_for('cv') }}">CV</a></p>
+        <p>По данной ссылке расположено мое <a href="{{ url_for('cv') }}">CV</a><br><br></p>
+
+        <script type="text/javascript" src="../static/themes.js"></script>
 
     </body>
 </html>

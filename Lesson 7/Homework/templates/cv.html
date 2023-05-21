@@ -3,9 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <title>CV</title>
-        <link rel="stylesheet" href="../static/Test%20style.css">
+        <link rel="stylesheet" href="../static/styles/main.css">
+        <link rel="stylesheet" type="text/css" href="../static/styles/<?php echo $_SESSION['theme']; ?>.css" id="theme-link">
     </head>
     <body>
+        <div class="theme-button" id="theme-button">Change theme</div>
         <h1>Джабраилов Виталий Дмитриевич</h1>
         <p class="h_education" >Навыки:</p>
         <ol class="education" >
@@ -20,6 +22,9 @@
             <li class="education">Всероссийская олимпиада школьников</li>
         </ol>
 
-    <p>Вернуться к <a href="{{ url_for('home') }}">визитной карте</a></p>
+        <p>Вернуться к <a href="{{ url_for('home') }}">визитной карте</a></p>
+
+        <script type="text/javascript" src="../static/themes.js"></script>
+
     </body>
     </html>
