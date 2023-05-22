@@ -1,0 +1,45 @@
+/*Стили основных частей*/
+
+body{
+     background: rgb(235, 235, 235)
+}
+
+h1{
+    color: black;
+}
+
+p{
+    color: black;
+}
+
+/*Классы стилей*/
+
+.h_education{
+    color: black;
+}
+
+.education{
+    color: black;
+}
+
+.theme-button
+{
+    color: rgb(0, 0, 0);
+    background: rgb(200, 200, 200)
+}
+
+
+/*Всплывающие окна*/
+
+.hide + label, .hide:checked + label {
+    color: black;
+    border-bottom: 1px dotted black;
+}
+
+.hide:checked + label {
+    color: rgb(155, 155, 155);
+}
+
+.hide:checked + label + div {
+    background: rgb(215, 215, 215);
+}

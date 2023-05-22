@@ -1,0 +1,45 @@
+/*Стили основных частей*/
+
+body{
+     background: rgb(20, 20, 20)
+}
+
+h1{
+    color: white;
+}
+
+p{
+    color: white;
+}
+
+/*Классы стилей*/
+
+.h_education{
+    color: white;
+}
+
+.education{
+    color: white;
+}
+
+
+.theme-button
+{
+    color: white;
+    background: rgb(55, 55, 55)
+}
+
+/*Всплывающие окна*/
+
+.hide + label, .hide:checked + label {
+    color: white;
+    border-bottom: 1px dotted white;
+}
+
+.hide:checked + label {
+    color: rgb(100, 100, 100);
+}
+
+.hide:checked + label + div {
+    background: rgb(40, 40, 40);
+}

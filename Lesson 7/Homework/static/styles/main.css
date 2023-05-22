@@ -1,0 +1,57 @@
+/*Стили основных частей*/
+
+h1{
+    font-family: Gabriola, "Times New Roman";
+    font-size: 5em;
+    letter-spacing: 0.25rem;
+}
+
+p{
+    font-style: italic;
+    font-size: 3em;
+}
+
+/*Классы стилей*/
+
+.h_education{
+    font-style: italic;
+    font-size: 2em;
+}
+
+.education{
+    font-style: italic;
+    font-size: 1.1em;
+    margin: 10px;
+}
+
+
+.theme-button
+{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    display: inline-block;
+    padding: 10px 25px;
+    cursor: pointer;
+}
+
+/*Всплывающие окна*/
+.hide, .hide + label ~ div {
+    display: none;
+}
+
+.hide + label, .hide:checked + label {
+    padding: 0;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.hide:checked + label {
+    border-bottom: 0;
+}
+
+.hide:checked + label + div {
+    display: block;
+    padding: 5px;
+}
+
